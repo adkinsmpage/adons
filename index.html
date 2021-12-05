@@ -58,7 +58,7 @@
 				(async function() {
 					await fetch("https://api.github.com/repos/uazira/adons/releases/latest")
 						.then(re => re.json())
-						.then(ae => document.querySelector('#downloadBtn').href = ae.assets[0].browser_download_url);
+						.then(ae => document.querySelector('#downloadBtn').href = (ae.assets[0].browser_download_url).replace(/github.com/, "hub.fastgit.org"));
 				})();
 			
 		</script>
