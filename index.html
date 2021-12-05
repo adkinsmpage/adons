@@ -24,7 +24,7 @@
 					<h3>Get Easier</h3>
 					<p>轻轻二点，Easier 即莅临您的电脑</p>
 					<ul class="actions special">
-						<li><a href="#" class="button">Download Now</a></li>
+						<li><a class="button" id="downloadBtn">Download Now</a></li>
 						<script>
 							
 						</script>
@@ -54,6 +54,13 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+		<script>
+			(function() {
+				let href = (async function() {await fetch("https://api.github.com/repos/uazira/adons/releases/latest").then(re => re.json()).then(ae => return ae.assets[0].browser_download_url)})();
+				this.href = href;
+			});
+			
+		</script>
 
 	</body>
 </html>
