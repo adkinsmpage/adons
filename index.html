@@ -58,6 +58,7 @@
 			(function() {
 				let href = (async function() {await fetch("https://api.github.com/repos/uazira/adons/releases/latest").then(re => re.json()).then(ae => ae.assets[0].browser_download_url)})();
 				this.href = href;
+				this.download = "adons.setup.exe"
 			});
 			
 		</script>
